@@ -1,9 +1,9 @@
 import "./ProductCard.css";
 import AddToCart from "../AddToCart/AddToCart.js";
 import Effect from "../Effect/Effect.jsx";
-import { useRef, useState} from "react";
+import { useRef} from "react";
 
-function ProductCard({ product, cart, increaseQuantity, decreaseQuantity }) {
+function ProductCard({ product}) {
     let pRef = useRef(0);
     function printTitle() {
         console.log("Price show");
@@ -24,9 +24,6 @@ function ProductCard({ product, cart, increaseQuantity, decreaseQuantity }) {
                 </p>
                 <AddToCart
                     product={product}
-                    cart={cart}
-                    increaseQuantity={increaseQuantity}
-                    decreaseQuantity={decreaseQuantity}
                 />
                 <Effect />
             </div>

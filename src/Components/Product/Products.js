@@ -1,7 +1,8 @@
 // Component
 import ProductCard from "../ProductCard/ProductCard.js";
 import { useState ,useEffect} from "react";
-function Products({cart,increament,decreament}){
+import React from "react";
+function Products(){
     let [products,setProduct]=useState([]);
     useEffect(()=>{
         fetch("https://602fc537a1e9d20017af105e.mockapi.io/api/v1/products")
@@ -19,15 +20,15 @@ function Products({cart,increament,decreament}){
             {
                 products.map(function(item){
                     return (
-                    <ProductCard key={item.id} product={item} cart={cart} increament={increament} decreament={decreament} />
+                    <ProductCard key={item.id} product={item}/>
                     )
                 })
             }
             
         </div>
     )
-}
+};
 
 export let a=20;
 export let b=30;
-export default Products;
+export default React.memo(Products);
