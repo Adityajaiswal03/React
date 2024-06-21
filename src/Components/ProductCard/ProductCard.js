@@ -3,17 +3,16 @@ import AddToCart from "../AddToCart/AddToCart.js";
 import Effect from "../Effect/Effect.jsx";
 import { useRef, useState} from "react";
 
-function ProductCard({product,cart,increament,decreament}){
-
+function ProductCard({ product, cart, increaseQuantity, decreaseQuantity }) {
     let pRef = useRef(0);
-    function printTitle(){
+    function printTitle() {
         console.log("Price show");
-        if(pRef.current.className==="hide"){
+        if (pRef.current.className === "hide") {
             pRef.current.className = "show";
-        }else{
+        } else {
             pRef.current.className = "hide";
         }
-        
+
         console.log(pRef.className);
     }
     return (
@@ -23,7 +22,12 @@ function ProductCard({product,cart,increament,decreament}){
                 <p ref={pRef} className="show">
                     {product.price.value}
                 </p>
-                <AddToCart product={product} cart={cart} increament={increament} decreament={decreament}/>
+                <AddToCart
+                    product={product}
+                    cart={cart}
+                    increaseQuantity={increaseQuantity}
+                    decreaseQuantity={decreaseQuantity}
+                />
                 <Effect />
             </div>
         </div>
