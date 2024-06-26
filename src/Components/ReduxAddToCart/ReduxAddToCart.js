@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import CartContext from "../../Context/CartContext";
 import { useDispatch } from "react-redux";
 
 function AddToCart({ product }) {

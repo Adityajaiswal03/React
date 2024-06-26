@@ -29,6 +29,4 @@ function Products(){
     )
 };
 
-export let a=20;
-export let b=30;
 export default React.memo(Products);
