@@ -9,8 +9,8 @@ function AddToCart({ product}) {
     function decrease() {
         decreaseQuantity(product);
     }
-    const quanitity = cart[product.id] ? cart[product.id].quanitity : 0;
-    if (quanitity === 0) {
+    const quantity = cart[product.id] ? cart[product.id].quantity : 0;
+    if (quantity === 0) {
         return (
             <div>
                 <div>
@@ -24,7 +24,7 @@ function AddToCart({ product}) {
                 <button onClick={increase}>
                     <p>+</p>
                 </button>
-                <span>{quanitity}</span>
+                <span>{quantity}</span>
                 <button onClick={decrease}>
                     <p>-</p>
                 </button>

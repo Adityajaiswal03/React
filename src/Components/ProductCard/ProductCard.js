@@ -1,6 +1,6 @@
 import "./ProductCard.css";
 import ReduxAddToCart from "../ReduxAddToCart/ReduxAddToCart.js";
-import Effect from "../Effect/Effect.jsx";
+
 import { useRef} from "react";
 
 function ProductCard({ product}) {
@@ -25,7 +25,6 @@ function ProductCard({ product}) {
                 <ReduxAddToCart
                     product={product}
                 />
-                <Effect />
             </div>
         </div>
     );

@@ -1,19 +1,9 @@
-import { defaultSerializeQueryArgs } from "@reduxjs/toolkit/query"
 import { useEffect, useState } from "react";
-
+import {loadCategories} from "../../store/Categories";
 function Categories(){
     const [categories,setCategories]=useState([]);
     useEffect(()=>{
-        fetch("").then(
-            (res)=>{
-                return res.json;
-            }
-        ).then(
-            (res)=>{
-                console.log(res);
-                setCategories(res);
-            }
-        )
+       dispatchEvent(loadCategories());
     },[]);
     return(
         <div>

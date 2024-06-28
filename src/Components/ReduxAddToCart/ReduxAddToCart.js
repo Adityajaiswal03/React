@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import {addToCart,removeFromCart} from "../../store";
+import {addToCart,removeFromCart} from "../../store/Cart";
 function AddToCart({ product }) {
     // useSelector
     let dispatch=useDispatch();
@@ -14,7 +14,7 @@ function AddToCart({ product }) {
     }
 
     let cart = useSelector((state) => {
-        return state.items;
+        return state.cart.items;
     });
 
     const quantity = cart[product.id] ? cart[product.id].quantity : 0;
