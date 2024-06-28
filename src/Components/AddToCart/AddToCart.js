@@ -5,7 +5,6 @@ function AddToCart({ product}) {
     const {cart,increaseQuantity,decreaseQuantity}=useContext(CartContext);
     function increase() {
         increaseQuantity(product);
-        console.log("I am increase");
     }
     function decrease() {
         decreaseQuantity(product);
